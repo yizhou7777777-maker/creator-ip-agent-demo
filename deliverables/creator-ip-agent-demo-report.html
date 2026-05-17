@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>博主 AI 运营助理演示报告</title>
+  <style>
+  * { box-sizing: border-box; }
+  @page { size: A4 landscape; margin: 0; }
+  html, body { width: 297mm; margin: 0; padding: 0; }
+  body { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; color: #172526; background: #f3f6f3; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 297mm; height: 210mm; overflow: hidden; padding: 15mm 16mm; page-break-after: always; background: #f7faf8; }
+  .cover { display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, #e8f3ef, #fff7ef); }
+  .cover h1 { font-size: 40px; margin: 0 0 14px; color: #075e59; }
+  .cover p { max-width: 210mm; font-size: 17px; line-height: 1.6; color: #334040; }
+  .tag { display: inline-block; width: fit-content; padding: 8px 14px; border-radius: 999px; background: #dff0ea; color: #075e59; font-weight: 700; }
+  h2 { margin: 0 0 7px; font-size: 25px; color: #102324; }
+  .desc { margin: 0 0 11px; color: #506061; font-size: 13.5px; line-height: 1.45; }
+  .content { display: grid; grid-template-columns: 175mm 1fr; gap: 10mm; align-items: start; }
+  img { width: 175mm; border: 1px solid #d7e2dd; border-radius: 8px; box-shadow: 0 8px 24px rgba(29, 44, 42, 0.1); }
+  .notes { display: grid; gap: 8mm; min-width: 0; }
+  .box { padding: 5mm; border: 1px solid #d7e2dd; border-radius: 8px; background: #fff; overflow-wrap: anywhere; }
+  .box strong { display: block; margin-bottom: 5px; color: #075e59; font-size: 14.5px; }
+  .box p, .box li { font-size: 12.5px; line-height: 1.5; color: #2e3d3d; }
+  .box p { margin: 0; }
+  ul { margin: 0; padding-left: 16px; }
+  li + li { margin-top: 5px; }
+</style>
+</head>
+<body>
+  <section class="page cover">
+    <span class="tag">C 端 Agent MVP</span>
+    <h1>博主 AI 运营助理</h1>
+    <p>一个面向五类上升期博主的个人 IP 自媒体创作工作台：用爆文结构加工用户自己的想法，完成对标解析、共创生成、发布评估和数据闭环。</p>
+    <p>当前版本支持 DeepSeek 共创生成；数据解析首期以粘贴/OCR为稳定主通道，专业取数和链接解析作为后续 API 接入能力预留。</p>
+  </section>
+  <section class="page">
+        <h2>1. 博主档案</h2>
+        <p class="desc">确定平台、五大赛道、账号调性、粉丝阶段和变现目标，让 Agent 的输出不再是通用文案。</p>
+        <div class="content">
+          <img src="file:///D:/app/claude code/deliverables/screenshots/01-profile.png" alt="1. 博主档案截图" />
+          <div class="notes">
+            <div class="box">
+              <strong>页面作用</strong>
+              <p>确定平台、五大赛道、账号调性、粉丝阶段和变现目标，让 Agent 的输出不再是通用文案。</p>
+            </div>
+            <div class="box">
+              <strong>设置功能区说明</strong>
+              <ul><li>主发布平台：决定小红书/抖音/视频号/朋友圈的表达节奏。</li><li>内容赛道：覆盖美妆护肤、母婴亲子、家居家装、时尚穿搭、个人IP专家五类核心用户。</li><li>账号调性与品牌 brief：约束口吻、商业承接和合规边界。</li></ul>
+            </div>
+          </div>
+        </div>
+      </section><section class="page">
+        <h2>2. 对标解析</h2>
+        <p class="desc">把对标爆文转成可复用结构。当前稳定支持粘贴正文/OCR，专业取数和链接解析作为数据 API 接入后的增强能力。</p>
+        <div class="content">
+          <img src="file:///D:/app/claude code/deliverables/screenshots/02-parse.png" alt="2. 对标解析截图" />
+          <div class="notes">
+            <div class="box">
+              <strong>页面作用</strong>
+              <p>把对标爆文转成可复用结构。当前稳定支持粘贴正文/OCR，专业取数和链接解析作为数据 API 接入后的增强能力。</p>
+            </div>
+            <div class="box">
+              <strong>设置功能区说明</strong>
+              <ul><li>专业取数：预留企业数据平台入口，后续可接 Just One API、千瓜、新红、灰豚等服务。</li><li>链接解析：预留小红书/抖音/视频号链接读取入口，接入 Cookie 或数据平台后可自动解析。</li><li>粘贴/OCR解析：当前主通道，用户复制标题、正文、口播稿或截图 OCR 文本即可继续完整流程。</li></ul>
+            </div>
+          </div>
+        </div>
+      </section><section class="page">
+        <h2>3. 用户想法</h2>
+        <p class="desc">让用户输入自己的基础思路，Agent 负责协助平台化、结构化和商业化，而不是替用户凭空创作。</p>
+        <div class="content">
+          <img src="file:///D:/app/claude code/deliverables/screenshots/03-intent.png" alt="3. 用户想法截图" />
+          <div class="notes">
+            <div class="box">
+              <strong>页面作用</strong>
+              <p>让用户输入自己的基础思路，Agent 负责协助平台化、结构化和商业化，而不是替用户凭空创作。</p>
+            </div>
+            <div class="box">
+              <strong>设置功能区说明</strong>
+              <ul><li>今天想讲的事情：提供真实内容起点。</li><li>想表达的观点：决定内容立场和核心判断。</li><li>产品/服务、希望效果、注意点和反向约束：控制商单承接、合规风险和去 AI 味。</li></ul>
+            </div>
+          </div>
+        </div>
+      </section><section class="page">
+        <h2>4. 共创产出</h2>
+        <p class="desc">结合爆文结构和用户想法，生成标题、正文、短视频分镜和封面方案。</p>
+        <div class="content">
+          <img src="file:///D:/app/claude code/deliverables/screenshots/04-generate.png" alt="4. 共创产出截图" />
+          <div class="notes">
+            <div class="box">
+              <strong>页面作用</strong>
+              <p>结合爆文结构和用户想法，生成标题、正文、短视频分镜和封面方案。</p>
+            </div>
+            <div class="box">
+              <strong>设置功能区说明</strong>
+              <ul><li>爆文拆解：展示可复用公式和关键词布局。</li><li>标题 A/B：覆盖避坑型、结果型、体验型、商单友好型。</li><li>正文、分镜、封面：分别服务图文、短视频和发布素材准备。</li></ul>
+            </div>
+          </div>
+        </div>
+      </section><section class="page">
+        <h2>5. 发布评估</h2>
+        <p class="desc">在发布前给出流量潜力、商单友好度、合规风险和下一步修改建议。</p>
+        <div class="content">
+          <img src="file:///D:/app/claude code/deliverables/screenshots/05-evaluate.png" alt="5. 发布评估截图" />
+          <div class="notes">
+            <div class="box">
+              <strong>页面作用</strong>
+              <p>在发布前给出流量潜力、商单友好度、合规风险和下一步修改建议。</p>
+            </div>
+            <div class="box">
+              <strong>设置功能区说明</strong>
+              <ul><li>流量潜力：判断标题、结构和平台适配度。</li><li>商单友好度：判断品牌 brief 是否自然承接。</li><li>风险预警和三点建议：帮助用户发布前规避绝对化、功效化和硬广感。</li></ul>
+            </div>
+          </div>
+        </div>
+      </section><section class="page">
+        <h2>6. 数据日志</h2>
+        <p class="desc">记录输入来源、生成来源、评分和下一步动作，体现 Agent 的数据闭环和后续迭代依据。</p>
+        <div class="content">
+          <img src="file:///D:/app/claude code/deliverables/screenshots/06-log.png" alt="6. 数据日志截图" />
+          <div class="notes">
+            <div class="box">
+              <strong>页面作用</strong>
+              <p>记录输入来源、生成来源、评分和下一步动作，体现 Agent 的数据闭环和后续迭代依据。</p>
+            </div>
+            <div class="box">
+              <strong>设置功能区说明</strong>
+              <ul><li>输入来源：区分链接、粘贴/OCR和专业取数。</li><li>生成来源：区分 DeepSeek API 和本地兜底。</li><li>成功指标：用于后续内容复盘和产品迭代。</li></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>

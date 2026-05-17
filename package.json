@@ -1,0 +1,31 @@
+{
+  "name": "creator-ip-agent-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node server/index.mjs --dev",
+    "build": "tsc && vite build",
+    "start": "node server/index.mjs",
+    "preview": "npm run build && npm start",
+    "report": "node scripts/build-demo-report.mjs"
+  },
+  "dependencies": {
+    "@lucasygu/redbook": "^0.7.2",
+    "@vitejs/plugin-react": "^6.0.2",
+    "express": "^5.2.1",
+    "lucide-react": "^0.468.0",
+    "pdf-lib": "^1.17.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^8.0.13"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.6.3"
+  }
+}
