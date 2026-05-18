@@ -8,6 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 const isDev = process.argv.includes("--dev");
 const port = Number(process.env.PORT || 5173);
+const host = process.env.HOST || (process.env.RENDER ? "0.0.0.0" : "127.0.0.1");
 
 loadEnv(".env");
 loadEnv(".env.local");
@@ -116,8 +117,8 @@ if (isDev) {
   });
 }
 
-app.listen(port, "127.0.0.1", () => {
-  console.log(`Creator Agent running at http://127.0.0.1:${port}/`);
+app.listen(port, host, () => {
+  console.log(`Creator Agent running at http://${host}:${port}/`);
 });
 
 function loadEnv(fileName) {
